@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenus - Calm Mind</title>
+<link rel="stylesheet" href="style.css">
+
+
+<!-- Gemini Import BEFORE script.js -->
+<script type="module">
+import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+window.genAI = new GoogleGenerativeAI("AIzaSyDEDREL4QBLA5l7xOLTxmS4ut5y6k9dEz4");
+</script>
+</head>
+<body>
+<!-- Background Video -->
+<video autoplay muted loop playsinline id="bg-video">
+<source src="assets/sakura.mp4" type="video/mp4">
+</video>
+<div id="overlay"></div>
+
+
+<!-- Background Music -->
+<audio id="bgm" loop>
+<source src="assets/calm-bgm.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Header Navigation -->
+<header>
+<a href="index.html" class="logo">
+<img src="assets/cherry-blossom.png" class="logo-img">
+Serenus
+</a>
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="journal.html">Journal</a>
+<a href="breathe.html">Breathe</a>
+</nav>
+</header>
+
+
+<div class="content">
+<h1>Serenus</h1>
+<p class="tagline">Your calm space for mental wellness</p>
+<button onclick="toggleBGM()" id="music-btn">Play Calm Music</button>
+
+
+<div class="mood-dial-container">
+<canvas id="particle-canvas" width="400" height="400"></canvas>
+
+
+<div class="mood-dial">
+  <div class="mood-option" data-mood="happy" data-label="Happy">Happy</div>
+  <div class="mood-option" data-mood="calm" data-label="Calm">Calm</div>
+  <div class="mood-option" data-mood="sad" data-label="Sad">Sad</div>
+  <div class="mood-option" data-mood="anxious" data-label="Anxious">Anxious</div>
+</div>
+
+
+<div class="current-mood" id="mood-display">Select your mood above</div>
+</div>
+
+
+<div id="ai-response" class="ai-response-box">Click a mood to get guidance 🌸</div>
+
+
+<!-- Main Script loaded AFTER Gemini API exists -->
+<script src="script.js"></script>
+</body>
+</html>
