@@ -1,4 +1,4 @@
-Authors: Satya Prakash Kothamasu, Arvin Lavu, Jaden Mathew****
+**Authors: Satya Prakash Kothamasu, Arvin Lavu, Jaden Mathew**
 # Serenus - Mental Wellness Web Application
 
 Serenus is a serene, interactive mental wellness application designed to help users manage their emotional health through journaling, mood tracking, and guided breathing exercises. Built with vanilla HTML, CSS, and JavaScript, it features a beautiful sakura-themed interface and AI-powered insights using Google's Gemini API.
